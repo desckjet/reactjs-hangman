@@ -1,0 +1,7 @@
+FROM centos
+
+RUN yum install httpd -y
+
+COPY build /var/www/html
+
+CMD apachectl -DFOREGROUND
